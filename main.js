@@ -45,13 +45,13 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('public/black.jpg');
+const spaceTexture = new THREE.TextureLoader().load('black.jpg');
 scene.background = spaceTexture;
 
 // Earth
 
-const earthTexture = new THREE.TextureLoader().load('public/earth.jpg');
-const normalTexture = new THREE.TextureLoader().load('public/earthnormal.jpg');
+const earthTexture = new THREE.TextureLoader().load('earth.jpg');
+const normalTexture = new THREE.TextureLoader().load('earthnormal.jpg');
 
 const earths = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
