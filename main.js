@@ -57,10 +57,10 @@ loader.load(
   function (gltf) {
 
              scene.add(gltf.scene);
-             gltf.scene.position.set(-4,-1,25)
+             gltf.scene.position.set(-6,-1,25)
              gltf.scene.rotation.x += 1.5;
              gltf.scene.rotation.y += 6;
-             gltf.scene.rotation.z += -0.3;
+             gltf.scene.rotation.z += 0.3;
 
   },
   (xhr) => {
