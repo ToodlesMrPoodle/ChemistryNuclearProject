@@ -2,6 +2,7 @@
 import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 // Setup
 
@@ -47,6 +48,28 @@ Array(200).fill().forEach(addStar);
 
 const spaceTexture = new THREE.TextureLoader().load('black.jpg');
 scene.background = spaceTexture;
+
+// Smoke Detector GLTF
+const loader = new GLTFLoader();
+
+loader.load(
+  'scene.glb',
+  function (gltf) {
+
+             scene.add(gltf.scene);
+             gltf.scene.position.set(-4,-1,25)
+             gltf.scene.rotation.x += 1.5;
+             gltf.scene.rotation.y += 6;
+             gltf.scene.rotation.z += -0.3;
+
+  },
+  (xhr) => {
+      console.log((xhr.loaded / xhr.total * 100) + '% loaded')
+  },
+  (error) => {
+      console.log(error);
+  }
+);
 
 // Earth
 
