@@ -74,7 +74,7 @@ loader.load(
 // Earth
 
 const earthTexture = new THREE.TextureLoader().load('earth.jpg');
-const normalTexture = new THREE.TextureLoader().load('earthnormal.jpg');
+const normalTexture = new THREE.TextureLoader().load('earthnormal1.jpg');
 
 const earths = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
