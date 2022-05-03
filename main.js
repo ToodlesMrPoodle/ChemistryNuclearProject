@@ -24,17 +24,29 @@ renderer.render(scene, camera);
 // Lights
 
 const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5, 5, 5);
+pointLight.position.set(6, 5, 10);
+
+const pointLight1 = new THREE.PointLight(0xffffff);
+pointLight1.position.set(3, 3, 50);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight);
+scene.add(pointLight, pointLight1);
+
+// Helpers
+
+// const lightHelper = new THREE.PointLightHelper(pointLight)
+// const lightHelper1 = new THREE.PointLightHelper(pointLight1)
+// const gridHelper = new THREE.GridHelper(200, 50);
+// scene.add(lightHelper, lightHelper1, gridHelper)
+
+// Stars
 
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
   const star = new THREE.Mesh(geometry, material);
 
-  const [x, y, z] = Array(3)
+  const [x, y, z] = Array(4)
     .fill()
     .map(() => THREE.MathUtils.randFloatSpread(100));
 
@@ -57,7 +69,7 @@ loader.load(
   function (gltf) {
 
              scene.add(gltf.scene);
-             gltf.scene.position.set(-8,-1,25)
+             gltf.scene.position.set(-7,0,25)
              gltf.scene.rotation.x += 1.5;
              gltf.scene.rotation.y += 6;
              gltf.scene.rotation.z += -1.1;
