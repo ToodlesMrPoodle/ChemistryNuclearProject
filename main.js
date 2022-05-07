@@ -101,6 +101,18 @@ scene.add(earths);
 earths.position.z = 2;
 earths.position.setX(5);
 
+// Image of Smoke Detector
+
+const cubeImage = new THREE.TextureLoader().load('smkdtr.png');
+
+const cube = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: cubeImage }));
+
+scene.add(cube);
+
+cube.position.z = 56
+cube.position.x = -5
+cube.rotation.y = 5
+
 // Scroll Animation
 
 function moveCamera() {
@@ -108,6 +120,10 @@ function moveCamera() {
   earths.rotation.x += 0;
   earths.rotation.y += 0.075;
   earths.rotation.z += 0;
+
+  cube.rotation.x += 0;
+  cube.rotation.y += 0.0002;
+  cube.rotation.z += 0;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
