@@ -48,13 +48,13 @@ function addStar() {
 
   const [x, y, z] = Array(4)
     .fill()
-    .map(() => THREE.MathUtils.randFloatSpread(100));
+    .map(() => THREE.MathUtils.randFloatSpread(200));
 
   star.position.set(x, y, z);
   scene.add(star);
 }
 
-Array(200).fill().forEach(addStar);
+Array(250).fill().forEach(addStar);
 
 // Background
 
