@@ -111,7 +111,7 @@ scene.add(cube);
 
 cube.position.z = 56
 cube.position.x = -5
-cube.rotation.y = 5
+cube.rotation.y = 5.5
 
 // Scroll Animation
 
@@ -120,11 +120,7 @@ function moveCamera() {
   earths.rotation.x += 0;
   earths.rotation.y += 0.075;
   earths.rotation.z += 0;
-
-  cube.rotation.x += 0;
-  cube.rotation.y += 0.0002;
-  cube.rotation.z += 0;
-
+  
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
   camera.rotation.y = t * -0.0002;
