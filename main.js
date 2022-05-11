@@ -110,7 +110,7 @@ const cube = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicM
 scene.add(cube);
 
 cube.position.z = 56
-cube.position.x = 5
+cube.position.x = -5
 cube.rotation.y = 6
 
 // Scroll Animation
