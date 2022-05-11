@@ -111,7 +111,7 @@ scene.add(cube);
 
 cube.position.z = 56
 cube.position.x = -2
-cube.rotation.y = 3
+cube.rotation.y = 0
 
 // Scroll Animation
 
